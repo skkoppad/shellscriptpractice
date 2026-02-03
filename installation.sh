@@ -10,9 +10,29 @@ echo "installing the nginx"
 dnf install nginx -y
 
 if [$? -ne 0]; then 
-echo "Installing the nginx...failur"
+echo "Installing the nginx...failure"
 exit 1
 else 
 echo "installing the nginx...sucess"
-exit 1
 if
+
+
+echo "installing mysql"
+if [$? -ne 0]; then
+dnf install mysql -y
+exit 1
+echo "instaling mysql.. failure"
+else
+echo "installing mysql.. sucess"
+if
+
+echo "installing nodejs"
+dnf install nodejs -y
+if [$? -ne 0]; then 
+echo "installing nodejs...failure"
+exit 1
+else 
+echo "installing nodejs...sucess"
+if 
+
+
